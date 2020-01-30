@@ -69,6 +69,7 @@ CoocurrenceTextureFeaturesImageFilter< TInputImage, TOutputImage, TMaskImage>
 
   this->m_Normalize = false;
   this->DynamicMultiThreadingOn();
+  this->DynamicMultiThreadingOff();
 }
 
 template<typename TInputImage, typename TOutputImage, typename TMaskImage>

@@ -69,6 +69,8 @@ CoocurrenceTextureFeaturesImageFilter< TInputImage, TOutputImage, TMaskImage>
 
   this->m_Normalize = false;
   this->DynamicMultiThreadingOn();
+
+  std::cerr << "filter constructed" << std::endl;
 }
 
 template<typename TInputImage, typename TOutputImage, typename TMaskImage>

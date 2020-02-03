@@ -69,8 +69,6 @@ CoocurrenceTextureFeaturesImageFilter< TInputImage, TOutputImage, TMaskImage>
 
   this->m_Normalize = false;
   this->DynamicMultiThreadingOn();
-
-  std::cout << "filter constructed" << std::endl;
 }
 
 template<typename TInputImage, typename TOutputImage, typename TMaskImage>
@@ -88,6 +86,7 @@ void
 CoocurrenceTextureFeaturesImageFilter<TInputImage, TOutputImage, TMaskImage>
 ::BeforeThreadedGenerateData()
 {
+  std::cout << "Before Threaded Generate Data" << std::endl;
 
   typename TInputImage::Pointer input = InputImageType::New();
   input->Graft(const_cast<TInputImage *>(this->GetInput()));
